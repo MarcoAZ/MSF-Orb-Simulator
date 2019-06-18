@@ -7,24 +7,52 @@ a {
   color: #00B7FF;
 }
 
+#title{
+  text-align: center;
+}
+
 #container{
   background-color: #CCDBFE;
   width: 800px;
 }
 
 #orbSelection{
-  border: medium solid black;
   background-color: #F189FE;
+  width: 120px;
+  float: left;
+}
+
+#orbSelection > label{
+  display: block;
 }
 
 #char-image{
-  height: 115px;
-  background-repeat:no-repeat;
+  height: 110px;
+  overflow: hidden;
+}
+
+#char-image > img {
+  margin-top: -554px;
 }
 
 #dropzone{
+  height: 192px;
   border: medium dotted blue;
   background-color: #3CA3F8;
+  margin-left: 120px;
+}
+
+#prize{
+  text-align: center;
+}
+
+#openOrb{
+  float: right;
+	background-color: orange;
+	color: white;
+	font-weight: bold;
+	height: 50px;
+	width: 200px;
 }
 
 #chestbox{
@@ -34,12 +62,19 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
 }
 
+.historic-image{
+  height: 110px;
+  overflow: hidden;
+}
+
+.historic-image > img {
+  margin-top: -554px;
+}
+
 .historicDrop{
   border: medium dotted black;
-  /* background-color: #FEAA9A; */
-  /* background-position-y: 111px; */
-  background-repeat:no-repeat;
-  height: 111px;
+  overflow: hidden;
+  height: 165px;
   /* width: 90px; */
   text-align: center;
   color: white;

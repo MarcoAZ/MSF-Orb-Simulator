@@ -1,17 +1,18 @@
 <div id="container">
-  <h1>{{title}}</h1>
-  <p>Welcome to {{title}}</p>
+  <h1 id="title">{{title}}</h1>
 
   <div id="orbSelection">
-    <input type="radio" name="orbtype" value="mega" checked="checked"/>Mega
-    <input type="radio" name="orbtype" value="premium"/>               Premium
-    <input type="radio" name="orbtype" value="redstar"/>               Red Star
+    <label><input type="radio" name="orbtype" value="mega" checked="checked"/>Mega</label>
+    <label><input type="radio" name="orbtype" value="premium"/>               Premium</label>
+    <label><input type="radio" name="orbtype" value="redstar"/>               Red Star</label>
   </div>
 
   <div id="dropzone">
-    <div id="char-image"></div>
-    <p id="char-name"></p>
-    <p id="shard-amt"></p>
+    <div id="prize">
+      <div id="char-image"></div>
+      <p id="char-name"></p>
+      <p id="shard-amt"></p>
+    </div>
   </div>
 
   <button id="openOrb" type="submit">Open</button>

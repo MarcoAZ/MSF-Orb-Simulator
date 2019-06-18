@@ -25,10 +25,8 @@ function openOrb(e){
     //update the dropzone
     $("#char-name").text(xhr.prize.char);
     $("#shard-amt").text("x"+xhr.prize.amt);
-    $("#char-image").css({
-      'background-image': 'url("/images/roster.png")',
-      'background-position-y': xhr.prize.BGPosition + '%'
-    });
+    $("#char-image").html('<img src="/images/roster.png">'); /*probably don't need this.
+                                                              need to set margin-top instead*/
 
     $("#openOrb").removeAttr("disabled");
   });
@@ -51,13 +49,16 @@ function addToHistory(newPrize){
   }
   else{
     //create new element
-    let newChar = $('<div id="' + name + '" class="historicDrop grid-item"><div class="portraitName">' + newPrize.prize.char + '</div><div>x<span id="' + name + 'Amt">' + newPrize.prize.amt + '</span></div></div>');
+    let newChar = $('<div id="' + name + '" class="historicDrop grid-item">');
+    let newCharText = $('<div class="portraitName">' + newPrize.prize.char + '</div><div>x<span id="' + name + 'Amt">' + newPrize.prize.amt + '</span></div></div>');
+    let newCharDiv = $('<div class="historic-image"></div>');
+    let newCharImg = $('<img src="/images/roster.png">');
 
+
+    newCharDiv.append(newCharImg);
+    newChar.append(newCharDiv);
+    newChar.append(newCharText);
     $("#chestbox").append(newChar);
-    $("#"+name).css({
-      'background-image': 'url("/images/roster.png")',
-      'background-position-y': newPrize.prize.BGPosition + '%'
-    });
   }
 }
 
