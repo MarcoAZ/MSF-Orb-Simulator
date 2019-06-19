@@ -35,14 +35,13 @@ function simLootBox(prizes){
   let sumWeight = 0.0;
   for(let i = 0; i < prizes.length; i++)
   {
-    sumWeight += prizes[i].prob;
+    sumWeight = (sumWeight*1000 + prizes[i].prob*1000)/1000;
   }
-  let min = 1.0; //just in case we need to change it later
-  // Returns a random integer between 1 (include) and maxWeight (include)
-  //borrowed code: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
-  let random = Math.floor(Math.random() * (sumWeight - min + 1.0)) + min;
 
-  //console.log('[ simulator ] orb sum weight: ' + sumWeight);
+  let random = Math.random() * sumWeight;
+
+  // console.log('[ simulator ] orb sum weight: ' + sumWeight);
+  // console.log('[ simulator ] random roll: ' + random);
 
   //for each probability in orbType
   for(let i = 0; i < prizes.length; i++)
@@ -51,10 +50,13 @@ function simLootBox(prizes){
     // console.log('[ simulator ] current prize slot probability: ' + prizes[i].prob);
 
     random -= prizes[i].prob;
+    // console.log('[ simulator ] random roll: ' + random);
+
     //if random <= 0, select this drop
     if(random <= 0){
       console.log('[ simulator ] Prize: ' + prizes[i].char + ', Amount: ' + prizes[i].amt + ', %: ' + prizes[i].prob);
       return prizes[i];
     }
   }
+  console.log("Uhoh. random = " + random);
 };
