@@ -50,7 +50,6 @@ function simLootBox(prizes){
     // console.log('[ simulator ] current prize slot probability: ' + prizes[i].prob);
 
     random -= prizes[i].prob;
-    // console.log('[ simulator ] random roll: ' + random);
 
     //if random <= 0, select this drop
     if(random <= 0){
@@ -58,5 +57,4 @@ function simLootBox(prizes){
       return prizes[i];
     }
   }
-  console.log("Uhoh. random = " + random);
 };

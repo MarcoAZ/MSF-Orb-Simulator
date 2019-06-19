@@ -39,12 +39,14 @@ a {
 #dropzone{
   height: 192px;
   border: medium dotted blue;
-  background-color: #3CA3F8;
+  background-image: url("/images/orb_bg.jpg");
   margin-left: 120px;
 }
 
 #prize{
   text-align: center;
+  font-weight: bold;
+  color: white;
 }
 
 #openOrb{
