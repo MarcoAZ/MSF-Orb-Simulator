@@ -15,7 +15,7 @@ As required by law (or maybe just by Apple/Google app requirements), the game pr
 	- Breakdown by orb types
 - Continuous opening until achieving requested result
 - Add Red Star orb with no boosts
-- Clear history option
+- ~~Clear history option~~
 
 ## Will Never Add
 - Specialty orbs
