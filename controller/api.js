@@ -16,12 +16,16 @@ module.exports = {
         //get all orb prizes for center pillar
         orb: orbDetail.find({"orbtype": req.body.orbtype, "pillar": 2}).lean().execAsync()
     }).then(function(results){
-     //call loot box simulator
-     let drop = simLootBox(results.orb);
+    let drop = {};
 
-     //return results
-     res.locals.results = drop;
-     res.locals.results.BGPosition = roster.getBGPosition(drop.char);
+    if(results.orb.length != 0){
+       //call loot box simulator
+       drop = simLootBox(results.orb);
+
+       //return results
+       res.locals.results = drop;
+       res.locals.results.BGPosition = roster.getBGPosition(drop.char);
+     }
      next();
     }).catch(function (err) {
                console.error(err);

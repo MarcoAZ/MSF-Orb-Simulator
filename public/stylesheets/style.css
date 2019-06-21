@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -49,11 +48,14 @@ a {
   color: white;
 }
 
+button{
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+}
+
 #openOrb{
   float: right;
-	background-color: orange;
-	color: white;
-	font-weight: bold;
 	height: 50px;
 	width: 200px;
 }
