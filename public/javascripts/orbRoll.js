@@ -20,7 +20,7 @@ function openOrb(e){
       //update the dropzone
       $("#char-name").text(xhr.prize.char);
       $("#shard-amt").text("x"+xhr.prize.amt);
-      $("#char-image").html('<img src="/images/roster.png">'); /*probably don't need this. need to set margin-top instead*/
+      $("#char-image").html('<img src="/images/roster.png">');
       $("#char-image > img").css({"margin-top": "-" + xhr.prize.BGPosition + "px"});
     }
 

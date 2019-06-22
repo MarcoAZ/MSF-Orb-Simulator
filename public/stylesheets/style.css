@@ -1,5 +1,17 @@
-body {
+html {
+  height: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background:
+    linear-gradient(330deg, rgba(0,51,153, .7), rgba(255,0,0,0) 60%),
+    linear-gradient(180deg, rgba(204,204,102,.4), rgba(0,0,255,0) 100%),
+    linear-gradient(50deg, rgba(102,51,153,1), rgba(0,255,0,0) 100%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body{
+
 }
 
 a {
@@ -11,13 +23,11 @@ a {
 }
 
 #container{
-  background-color: #CCDBFE;
   width: 810px;
   margin: 0 auto;
 }
 
 #orbSelection{
-  background-color: #F189FE;
   width: 120px;
   float: left;
 }
@@ -37,7 +47,7 @@ a {
 
 #dropzone{
   height: 192px;
-  border: medium dotted blue;
+  border: medium solid #CCCCCC;
   background-image: url("/images/orb_bg.jpg");
   margin-left: 120px;
 }
@@ -64,9 +74,14 @@ button{
   background-color: grey;
 }
 
+#stats{
+  float: left;
+  margin-top: 50px;
+}
+
 #chestbox{
-  border: medium solid red;
-  background-color: lightblue;
+  margin-left: 120px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
 }
@@ -84,7 +99,6 @@ button{
   border: medium dotted black;
   overflow: hidden;
   height: 165px;
-  /* width: 90px; */
   text-align: center;
   color: white;
   font-weight: bold;
