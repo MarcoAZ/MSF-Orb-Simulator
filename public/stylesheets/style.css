@@ -1,6 +1,5 @@
 html {
   height: 100%;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background:
     linear-gradient(330deg, rgba(0,51,153, .7), rgba(255,0,0,0) 60%),
     linear-gradient(180deg, rgba(204,204,102,.4), rgba(0,0,255,0) 100%),
@@ -10,16 +9,15 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 body{
-
-}
-
-a {
-  color: #00B7FF;
+  font: 14px 'Exo', sans-serif;
+  color: white;
 }
 
 #title{
   text-align: center;
+  font-style: italic;
 }
 
 #container{
@@ -47,6 +45,7 @@ a {
 
 #dropzone{
   height: 192px;
+  width: 684px;
   border: medium solid #CCCCCC;
   background-image: url("/images/orb_bg.jpg");
   margin-left: 120px;
@@ -68,6 +67,7 @@ button{
   float: right;
 	height: 50px;
 	width: 200px;
+  margin-top: 15px;
 }
 
 #openOrb:disabled{
@@ -76,12 +76,13 @@ button{
 
 #stats{
   float: left;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 #chestbox{
+  width: 684px;
   margin-left: 120px;
-  margin-top: 50px;
+  margin-top: 70px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
 }
@@ -96,7 +97,6 @@ button{
 }
 
 .historicDrop{
-  border: medium dotted black;
   overflow: hidden;
   height: 165px;
   text-align: center;

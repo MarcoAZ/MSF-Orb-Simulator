@@ -6,7 +6,7 @@ var api = require("../controller/api");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Marvel Strike Force Orb Opening Simulator' });
+  res.render('index', { title: 'MARVEL STRIKE FORCE Orb Opening Simulator' });
 });
 
 /*Test POST on main page*/

@@ -12,7 +12,6 @@ function updateOrbCount(orbtype) {
     //else create it, then update
     let newCounter = $('<p>' + orbtype + ': <span id="' + orbtype + 'Counter">1</span></p>');
     $("#counters").append(newCounter);
-    // $("#" + orbtype + "Counter").text(++currentCount);
   }
 }
 
@@ -30,7 +29,7 @@ function addToHistory(newPrize){
   else{
     //create new element
     let newChar = $('<div id="' + name + '" class="historicDrop grid-item">');
-    let newCharText = $('<div class="portraitName">' + newPrize.prize.char + '</div><div>x<span id="' + name + 'Amt">' + newPrize.prize.amt + '</span></div></div>');
+    let newCharText = $('<div class="portraitName">' + newPrize.prize.char.toUpperCase() + '</div><div>x<span id="' + name + 'Amt">' + newPrize.prize.amt + '</span></div></div>');
     let newCharDiv = $('<div class="historic-image"></div>');
     let newCharImg = $('<img src="/images/roster.png">');
     newCharImg.css({"margin-top": "-" + newPrize.prize.BGPosition + "px"});

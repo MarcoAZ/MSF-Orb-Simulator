@@ -18,7 +18,7 @@ function openOrb(e){
       updateOrbCount(orbtype);
 
       //update the dropzone
-      $("#char-name").text(xhr.prize.char);
+      $("#char-name").text(xhr.prize.char.toUpperCase());
       $("#shard-amt").text("x"+xhr.prize.amt);
       $("#char-image").html('<img src="/images/roster.png">');
       $("#char-image > img").css({"margin-top": "-" + xhr.prize.BGPosition + "px"});

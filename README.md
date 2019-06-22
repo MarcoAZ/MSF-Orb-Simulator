@@ -12,7 +12,7 @@ As required by law (or maybe just by Apple/Google app requirements), the game pr
 
 ## To Do List
 - More Statistics
-	- Breakdown by orb types
+	- ~~Breakdown by orb types~~
 	- Biggest character drop total
 - Continuous opening until achieving requested result
 - Add Red Star orb with no boosts
