@@ -1,12 +1,14 @@
 function openOrb(e){
   e.preventDefault(); //prevent page refresh/POST to this page
-  $(this).attr("disabled", true);
+  let button = $(this);
+  button.attr("disabled", true).text("OPENING...");
 
   let orbtype = $("input[name=orbtype]:checked").val();
 
   var posting = $.ajax({
     type : 'POST',
     url: "/",
+    timeout: 1000,
     dataType: 'json',
     data: JSON.stringify({"orbtype": orbtype}),
     contentType: 'application/json; charset=UTF-8'
@@ -23,11 +25,9 @@ function openOrb(e){
       $("#char-image").html('<img src="/images/roster.png">');
       $("#char-image > img").css({"margin-top": "-" + xhr.prize.BGPosition + "px"});
     }
-
-    $("#openOrb").removeAttr("disabled");
   });
 
   posting.always(function (xhr){
-    $("#openOrb").removeAttr("disabled");
+    button.removeAttr("disabled").text("OPEN");
   });
 };

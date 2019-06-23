@@ -17,7 +17,8 @@ function updateOrbCount(orbtype) {
 
 function addToHistory(newPrize){
   let name = newPrize.prize.char;
-  name = name.replace(/\s+/g, '');
+  //remove spaces and periods to use as ID names
+  name = name.replace(/\s+|\./g, '');
 
   let prevCharDrops = $("#chestbox").find("#"+ name);
 

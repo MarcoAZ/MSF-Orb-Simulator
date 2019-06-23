@@ -1,7 +1,9 @@
-<div id="container">
-  <h1 id="title">{{title}}</h1>
+<div id="title">
+  <h1><span>MARVEL STRIKE FORCE</span> Orb Opening Simulator</h1>
+</div>
 
-  <div id="orbSelection">
+<div id="container">
+  <div id="orbSelection" class="bluebox">
     <label><input type="radio" name="orbtype" value="Mega" checked="checked"/>Mega</label>
     <label><input type="radio" name="orbtype" value="Premium"/>               Premium</label>
     <label><input type="radio" name="orbtype" value="Ultimus"/>               Ultimus</label>
@@ -16,10 +18,10 @@
   </div>
 
   <button id="openOrb" type="submit">OPEN</button>
-  <div id="stats">
+  <div id="stats" class="bluebox">
     <h3>HISTORY</h3>
     <button id="clear">CLEAR HISTORY</button>
     <div id="counters"></div>
   </div>
-  <div id="chestbox"></div>
+  <div id="chestbox" class="bluebox"></div>
 </div>
