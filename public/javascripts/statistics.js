@@ -17,8 +17,8 @@ function updateOrbCount(orbtype) {
 
 function addToHistory(newPrize){
   let name = newPrize.prize.char;
-  //remove spaces and periods to use as ID names
-  name = name.replace(/\s+|\./g, '');
+  //remove spaces, periods, apostrophes to use as ID names
+  name = name.replace(/\s+|\.+|\'/g, '');
 
   let prevCharDrops = $("#chestbox").find("#"+ name);
 
@@ -26,6 +26,8 @@ function addToHistory(newPrize){
     let prevAmt = +(prevCharDrops.find("#"+ name +"Amt").text());
     let newAmt = prevAmt + newPrize.prize.amt;
     prevCharDrops.find("#"+ name +"Amt").text(newAmt);
+    // console.log(prevCharDrops.find(".historic-image > img"));
+    prevCharDrops.find(".historic-image").effect("highlight");
   }
   else{
     //create new element
@@ -35,11 +37,11 @@ function addToHistory(newPrize){
     let newCharImg = $('<img src="/images/roster.png">');
     newCharImg.css({"margin-top": "-" + newPrize.prize.BGPosition + "px"});
 
-
     newCharDiv.append(newCharImg);
     newChar.append(newCharDiv);
     newChar.append(newCharText);
     $("#chestbox").prepend(newChar);
+    newCharDiv.effect("highlight");
   }
 }
 

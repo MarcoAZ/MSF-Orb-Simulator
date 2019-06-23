@@ -28,11 +28,14 @@ function openOrb(e){
       }
       $("#char-image > img").css({"margin-top": "-" + xhr.prize.BGPosition + "px"});
 
-      $("#prize").effect("bounce", {"queue": false});
+      $("#prize").effect("bounce");
     }
   });
 
   posting.always(function (xhr){
-    button.removeAttr("disabled").text("OPEN");
+    //stop people from spamming button and causing odd behavior
+    setTimeout(function () {
+      button.removeAttr("disabled").text("OPEN");
+    }, 500);
   });
 };

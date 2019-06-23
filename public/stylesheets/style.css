@@ -74,6 +74,7 @@ body{
   text-align: center;
   font-weight: bold;
   color: white;
+  padding-top: 15px;
 }
 
 button{
@@ -116,6 +117,7 @@ button{
 .historic-image{
   height: 110px;
   overflow: hidden;
+  border-radius: 75%;
 }
 
 .historic-image > img {
@@ -123,7 +125,6 @@ button{
 }
 
 .historicDrop{
-  overflow: hidden;
   height: 180px;
   text-align: center;
   color: white;
