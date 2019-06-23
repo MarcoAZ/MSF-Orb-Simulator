@@ -46,4 +46,7 @@ function addToHistory(newPrize){
 function clearHistory() {
   $("#chestbox").empty();
   $("#counters").empty();
+  $("#char-image").html("");
+  $("#char-name").html("");
+  $("#shard-amt").html("");
 }

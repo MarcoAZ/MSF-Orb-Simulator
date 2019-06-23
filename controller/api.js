@@ -19,10 +19,8 @@ module.exports = {
     let drop = {};
 
     if(results.orb.length != 0){
-       //call loot box simulator
        drop = simLootBox(results.orb);
 
-       //return results
        res.locals.results = drop;
        res.locals.results.BGPosition = roster.getBGPosition(drop.char);
      }
