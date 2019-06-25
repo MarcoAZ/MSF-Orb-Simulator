@@ -33,7 +33,7 @@ function openOrb(e){
   });
 
   posting.always(function (xhr){
-    //stop people from spamming button and causing odd behavior
+    //stop people from spamming button and causing odd behavior on bounce
     setTimeout(function () {
       button.removeAttr("disabled").text("OPEN");
     }, 500);

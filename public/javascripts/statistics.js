@@ -26,7 +26,6 @@ function addToHistory(newPrize){
     let prevAmt = +(prevCharDrops.find("#"+ name +"Amt").text());
     let newAmt = prevAmt + newPrize.prize.amt;
     prevCharDrops.find("#"+ name +"Amt").text(newAmt);
-    // console.log(prevCharDrops.find(".historic-image > img"));
     prevCharDrops.find(".historic-image").effect("highlight");
   }
   else{

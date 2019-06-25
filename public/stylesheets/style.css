@@ -110,7 +110,7 @@ button{
   margin-left: 140px;
   margin-top: 70px;
   display: grid;
-  grid-template-rows: 165px 1fr;
+  grid-template-rows: 165px;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
 }
 
@@ -126,6 +126,7 @@ button{
 
 .historicDrop{
   height: 180px;
+  width: 97px;
   text-align: center;
   color: white;
   font-weight: bold;
