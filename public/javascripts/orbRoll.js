@@ -7,7 +7,7 @@ function openOrb(e){
 
   var posting = $.ajax({
     type : 'POST',
-    url: "/",
+    // url: "/",
     timeout: 1000,
     dataType: 'json',
     data: JSON.stringify({"orbtype": orbtype}),

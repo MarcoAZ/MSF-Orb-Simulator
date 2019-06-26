@@ -108,7 +108,8 @@ roster : {
 "Wasp":          102,
 "Winter Soldier":          103,
 "Wolverine":          104,
-"Yondu":          105
+"Yellow Jacket":      105,
+"Yondu":          106
 },
 
 getBGPosition: function(char){
