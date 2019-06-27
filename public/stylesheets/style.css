@@ -43,13 +43,19 @@ body{
 
 #orbSelection{
   width: 121px;
-  height: 192px;
+  height: 182px;
   float: left;
+  padding-top: 10px;
 }
 
 #orbSelection > label{
   display: block;
 }
+
+#orbSelection > label:hover {
+	color: orange;
+}
+
 
 #char-image{
   height: 110px;
@@ -81,7 +87,13 @@ button{
   background-color: orange;
   color: white;
   font-weight: bold;
+  white-space: normal;
   box-shadow: 0 0 10px orange;
+}
+
+button:hover{
+  background-color: rgb(255,140,0);
+  box-shadow: 0 0 10px rgb(255,140,0);
 }
 
 #openOrb{
@@ -99,10 +111,24 @@ button{
 }
 
 #stats{
+  width: 121px;
   float: left;
   margin-top: 70px;
   background-color: rgb(0, 0, 128, 0.2);
   border: medium solid rgb(0, 0, 128, .5);
+}
+
+#stats > h3{
+  text-align: center;
+}
+
+#clear{
+  width: 95px;
+  margin: 0 10px 10px 10px;
+}
+
+#counters{
+  padding-left: 5px;
 }
 
 #chestbox{
