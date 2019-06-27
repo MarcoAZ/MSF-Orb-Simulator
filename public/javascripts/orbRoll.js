@@ -4,38 +4,43 @@ function openOrb(e){
   button.attr("disabled", true).text("OPENING...");
 
   let orbtype = $("input[name=orbtype]:checked").val();
+  let simAmt = $("#simAmt").text();
 
-  var posting = $.ajax({
-    type : 'POST',
-    // url: "/",
-    timeout: 1000,
-    dataType: 'json',
-    data: JSON.stringify({"orbtype": orbtype}),
-    contentType: 'application/json; charset=UTF-8'
-  });
+  for(var i = 0; i < simAmt; i++)
+  {
+    var posting = $.ajax({
+      type : 'POST',
+      // url: "/",
+      timeout: 1000,
+      dataType: 'json',
+      data: JSON.stringify({"orbtype": orbtype}),
+      contentType: 'application/json; charset=UTF-8'
+    });
 
-  posting.done(function (xhr) {
-    if(xhr.prize != undefined){
-      addToHistory(xhr);
-      updateOrbCount(orbtype);
+    posting.done(function (xhr) {
+      if(xhr.prize != undefined){
+        addToHistory(xhr);
+        updateOrbCount(orbtype);
 
-      //update the dropzone
-      $("#char-name").text(xhr.prize.char.toUpperCase());
-      $("#shard-amt").text("x"+xhr.prize.amt);
+        //update the dropzone
+        $("#char-name").text(xhr.prize.char.toUpperCase());
+        $("#shard-amt").text("x"+xhr.prize.amt);
 
-      if($("#char-image").html() == ""){
-        $("#char-image").html('<img src="/images/roster.png">');
+        if($("#char-image").html() == ""){
+          $("#char-image").html('<img src="/images/roster.png">');
+        }
+        $("#char-image > img").css({"margin-top": "-" + xhr.prize.BGPosition + "px"});
+        if($("#prize").queue().length == 0){
+          $("#prize").effect("bounce");
+        }
       }
-      $("#char-image > img").css({"margin-top": "-" + xhr.prize.BGPosition + "px"});
+    });
 
-      $("#prize").effect("bounce");
-    }
-  });
-
-  posting.always(function (xhr){
-    //stop people from spamming button and causing odd behavior on bounce
-    setTimeout(function () {
-      button.removeAttr("disabled").text("OPEN");
-    }, 500);
-  });
+    posting.always(function (xhr){
+      //stop people from spamming button and causing odd behavior on bounce
+      setTimeout(function () {
+        button.removeAttr("disabled").text("OPEN");
+      }, 500);
+    });
+  }
 };

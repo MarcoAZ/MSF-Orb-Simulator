@@ -17,7 +17,15 @@
     </div>
   </div>
 
-  <button id="openOrb" type="submit">OPEN</button>
+  <div id="inputSection">
+
+    <label>Number of Orbs: </label>
+    <input type="range" min="1" max="25" value="1" id="slider" class="slider">
+    <span id="simAmt" class="slider">1</span>
+
+    <button id="openOrb" type="submit">OPEN</button>
+  </div>
+
   <div id="stats" class="bluebox">
     <h3>HISTORY</h3>
     <button id="clear">CLEAR HISTORY</button>
