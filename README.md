@@ -9,6 +9,7 @@ As required by law (or maybe just by Apple/Google app requirements), the game pr
 - Running tally of orbs opened
 - Running tally of prize amounts
 - Prize history chestbox
+- Multi-Sim (1-25 at a time)
 
 ## To Do List
 - More Statistics
