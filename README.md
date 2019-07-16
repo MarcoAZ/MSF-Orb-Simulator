@@ -19,6 +19,7 @@ As required by law (or maybe just by Apple/Google app requirements), the game pr
 - Continuous opening until achieving requested result
 - Add Red Star orb with no boosts
 - ~~Clear history option~~
+- Add note for last update/added characters
 - Add number of times a character was awarded?
 
 ## Will Never Add
